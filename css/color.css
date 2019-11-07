@@ -1,0 +1,239 @@
+class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+
+  .icon-heart:before { content: '\e800'; } /* '' */
+  .icon-comment:before { content: '\f4ac'; } /* '' */
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.margen {
+    max-width: 960px;
+    width: 100%;
+}
+
+.header {
+    height: 75px;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.header .margen {
+    display: grid;
+    grid-template: 75px / repeat(3, 1fr);
+    margin: 0 auto;
+}
+
+.link-logo {
+    display: flex;
+    align-items: center;
+    height: 75px;
+}
+
+.logoSVG{
+    border-right: 1px solid #262626;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+/* .link-logo img {
+    width: 103px;
+    height: auto;
+    margin-top: 7px;
+} */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscador {
+    width: 200px;
+    height: 15px;
+    padding: 5px;
+    background-color: rgb(219, 219, 219);
+    border: 1px solid rgb(219, 219, 219);
+}
+
+.menu-container ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 75px;
+}
+
+.menu-container ul li {
+    list-style: none;
+}
+
+.menu-container ul li a {
+    margin-right: 0px;
+}
+
+.menu-container ul li:last-child a {
+    margin-right: 0;
+}
+
+.profile {
+    width: 920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 220px / 300px 1fr;
+    /* border: 1px solid red; */
+    padding-top: 60px;
+    margin-bottom: 44px;
+}
+
+.image-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    grid-gap:28px;
+}
+
+.post {
+    cursor: pointer;
+    position: relative;
+    /* width: 200px; */
+    display: block;
+}
+
+.post-image {
+    margin: 0;
+}
+
+.post-image img {
+    width: 100%;
+    /* height: 100%;; */
+    vertical-align: top;
+}
+
+.post-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.post:hover .post-overlay {
+    display: flex;
+}
+
+.post-likes,
+.post-comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer
+{
+    width: 920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 100px / 1fr 150px;
+}
+
+.links
+{
+    display: flex;
+    align-items: center;
+}
+
+.links ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.links ul li
+{
+    list-style: none;
+}
+
+.links ul li a
+{
+    text-decoration: none;
+    color: #003569;
+    margin: 5px;
+    font-size: .8em;
+}
+
+.links ul li:first-child a
+{
+    margin-left: 0;
+}
+.copy
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.copy p
+{
+    font-size: .8em;
+    text-transform: uppercase;
+    color: grey;
+
+@media screen and (max-width:768px) {
+    .post-list{
+        grid-gap: 3px;
+    }
+
+}
